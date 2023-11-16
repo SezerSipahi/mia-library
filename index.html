@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #292929;
+            color: #fff;
+        }
+
+        /* Ekran genişliği 768px'e kadar olan cihazlar için stil ayarı */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Menüyü dikey hale getir */
+        align-items: center; /* Öğeleri ortala */
+        position: relative; /* Yükseklik hesaplamak için pozisyonu ayarla */
+        padding: 20px !important; /* Ekran küçükken padding 20px olsun */
+    }
+
+    nav a {
+        padding: 10px; /* Örneğin, padding değerlerini ihtiyaca göre ayarlayabilirsiniz */
+    }
+
+    /* Hamburger Menü İçin Stil Ayarı */
+    #menu-toggle {
+        display: block; /* Sadece küçük ekranlarda görünür olsun */
+        cursor: pointer;
+        background: none;
+        border: none;
+        font-size: 18px;
+        color: #fff;
+        position: absolute; /* Hamburger menüyü üstte sabitle */
+        top: 10px;
+        right: 10px;
+    }
+
+    main {
+        padding: 10px; /* İçerikler arasındaki boşluğu azalt */
+    }
+
+    .content {
+        width: 100%; /* Mobil görünümde tam genişlik */
+    }
+
+    /* Sandviç menü öğelerini gizle */
+    nav a {
+        display: none;
+    }
+
+    /* Sandviç menü açıldığında görünmesini sağla */
+    nav.show-menu a {
+        display: block;
+    }
+}
+
+/* Ekran genişliği 769px ve üzeri olan cihazlar için stil ayarı */
+@media (min-width: 769px) {
+    #menu-toggle {
+        display: none !important; /* Büyük ekranlarda görünmez olsun */
+    }
+
+    nav {
+        flex-direction: row; /* Büyük ekranlarda menüyü yatay hale getir */
+        justify-content: space-around;
+        padding: 10px !important; /* Ekran büyükken padding 10px olsun */
+    }
+}
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #555;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 9px 70px;
+            /* Örneğin, padding değerlerini ihtiyaca göre ayarlayabilirsiniz */
+            transition: background-color 0.3s, color 0.3s;
+            /* Geçiş efektini ekledik */
+        }
+
+        nav a:hover {
+            background-color: #fff;
+            color: #292929;
+        }
+
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            /* Yeterli genişlik yoksa bir alt satıra geç */
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .content {
+            border: 1px solid #ccc;
+            padding: 15px;
+            background-color: #fff;
+            margin-bottom: 20px;
+            width: 30%;
+            /* İçeriklerin genişliği */
+            box-sizing: border-box;
+            /* Padding ve border'ı içerik alanına dahil et */
+        }
+
+        .content a{
+            color: #292929;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            border-bottom: 1px solid black;
+            padding: 8px;
+        }
+        footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #333;
+        color: #fff;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    footer div {
+        flex: 1;
+        margin: 10px;
+    }
+
+    h3 {
+        border-bottom: 2px solid #fff;
+        padding-bottom: 5px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 5px;
+    }
+
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+        footer div {
+            flex: 100%;
+        }
+    }
+
+        /* Eklediğim stil özellikleri */
+        @media (max-width: 768px) {
+            .content {
+                width: 100%;
+                /* Mobil görünümde tam genişlik */
+            }
+        }
+    </style>
+    <title>HTML Sayfası</title>
+</head>
+
+<body>
+
+    <header>
+        <img src="images/Mia Kütüphanesi.png" alt="Logo" style="width: 150px; height: 150px;">
+    </header>
+
+    <!-- Hamburger Menü İçin Toggle Butonu -->
+
+    <nav>
+        <button id="menu-toggle">&#9776; Menu</button>
+        <!-- Menü Öğeleri -->
+        <a href="#">Anasayfa</a>
+        <a href="#">Filmler</a>
+        <a href="#">Diziler</a>
+        <a href="#">Kitaplar</a>
+        <a href="#">Hakkımızda</a>
+    </nav>
+
+
+    <main>
+        <div class="content">
+            <ul>
+                <a href=""><li>Dune: Part One</li></a>
+                 <a href=""><li>Lucy</li></a>
+                 <a href=""><li>Interstellar</li></a>
+                 <a href=""><li>Oppenheimer</li></a>
+                 <a href=""><li>The Godfather</li></a>
+                 <a href=""><li>The Shawshank Redemption</li></a>
+                 <a href=""><li>The Batman</li></a>
+                 <a href=""><li>Whiplash</li></a>
+                 <a href=""><li>The Wolf of Wall Street</li></a>
+                 <a href=""><li>Pulp Fiction</li></a>
+            </ul>
+        </div>
+
+        <div class="content">
+            <ul>
+                <a href=""><li>Loki</li></a>
+                <a href=""><li>Gen V</li></a>
+                <a href=""><li>The Boys</li></a>
+                <a href=""><li>Rick and Morty</li></a>
+                <a href=""><li>Game of Thrones</li></a>
+                <a href=""><li>American Horror Story</li></a>
+                <a href=""><li>Stranger Things</li></a>
+                <a href=""><li>Breaking Bad</li></a>
+                <a href=""><li>Shameless</li></a>
+                <a href=""><li>Succession</li></a>
+            </ul>
+        </div>
+
+        <div class="content">
+            <ul>
+                <a href=""><li>Kürk Mantolu Madonna</li></a>
+                <a href=""><li> Hayvan Çiftliği</li></a>
+                <a href=""><li>Satranç</li></a>
+                <a href=""><li>Küçük Prens</li></a>
+                <a href=""><li>Şeker Portakalı</li></a>
+                <a href=""><li>Bilinmeyen Bir Kadının Mektubu</li></a>
+                <a href=""><li>Dönüşüm</li></a>
+                <a href=""><li>Simyacı</li></a>
+                <a href=""><li>İnsan Neyle Yaşar?</li></a>
+                <a href=""><li>Kuyucaklı Yusuf</li></a>
+            </ul>
+        </div>
+
+    </main>
+
+    <footer>
+        <div>
+            <h3>İletişim Bilgileri</h3>
+            <p>Adres: Örnek Caddesi No: 123, Şehir, Ülke</p>
+            <p>Email: info@example.com</p>
+            <p>Telefon: +90 123 456 78 90</p>
+        </div>
+        <div>
+            <h3>Sosyal Medya</h3>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Hakkımızda</h3>
+            <p>Web sitemiz üzerinden en güncel kitap, film ve dizi bilgilerine ulaşabilirsiniz. Bizimle iletişime geçmekten çekinmeyin!</p>
+        </div>
+    </footer>
+    
+
+</body>
+
+<script>
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+        document.querySelector('nav').classList.toggle('show-menu');
+    });
+</script>
+
+</html>
